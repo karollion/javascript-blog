@@ -4,6 +4,7 @@
 
 $color-light: #fff;
 $color-dark: #444;
+$color-background: #4a69bd;
 
 $font-logo: 'Sacramento', cursive;
 $font-header: 'Oswald', sans-serif;
@@ -16,7 +17,7 @@ $font-text: 'Source Sans Pro', sans-serif;
 }
 
 body {
-  background: $color-light;
+  background: $color-background;
   font-family: $font-text;
   color: $color-dark;
   font-weight: 300;
@@ -100,13 +101,29 @@ body {
 }
 
 /* Post */
+.posts {
+  position: relative;
+  height: 70vh;
+}
 
 .post {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  transition: 0.5s all;
+  z-index: 1;
+  &.active {
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+/*.post {
   display: none;
   &.active {
     display: block;
   }
-}
+}*/
 
 .post-author {
   font-style: italic;
