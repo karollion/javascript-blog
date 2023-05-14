@@ -4,7 +4,8 @@
 
 $color-light: #fff;
 $color-dark: #444;
-$color-background: #4a69bd;
+$color-background: #0c2461;
+$color-bg-menu: #6a89cc;
 
 $font-logo: 'Sacramento', cursive;
 $font-header: 'Oswald', sans-serif;
@@ -19,7 +20,8 @@ $font-text: 'Source Sans Pro', sans-serif;
 body {
   background: $color-background;
   font-family: $font-text;
-  color: $color-dark;
+  color: $color-light;
+  text-shadow: 1px 1px 2px rgb(37, 37, 37);
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
@@ -42,6 +44,12 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+  color: $color-light;
+  text-shadow: 1px 1px 2px rgb(37, 37, 37);
+}
+
 /* Layout */
 
 .wrapper {
@@ -57,8 +65,8 @@ body {
   flex: 2 0 0;
 }
 
-.sidebar, .posts {
-  background: $color-light;
+.sidebar {
+  background: $color-bg-menu;
   margin-right: 10px;
   padding: 40px;
   border: 1px solid $color-dark;
@@ -107,6 +115,11 @@ body {
 }
 
 .post {
+  background: $color-bg-menu;
+  margin-right: 10px;
+  padding: 40px;
+  border: 1px solid $color-dark;
+  border-radius: 5px;
   position: absolute;
   display: block;
   opacity: 0;
