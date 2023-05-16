@@ -3,7 +3,7 @@
   const titleClickHandler = function(event){
     event.preventDefault();
     const clickedElement = this;
-    
+
     /* [DONE] remove class 'active' from all article links  */
     const activeLinks = document.querySelectorAll('.titles a.active');
 
@@ -56,7 +56,7 @@
       let articleLink = ('<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a><li>');
       /* insert link into html variable */
       html = html + articleLink;
-    
+
     }
     /* add links to left list of articles */
     titleList.innerHTML = html;
@@ -67,6 +67,5 @@
       link.addEventListener('click', titleClickHandler);
     }
   };
-
   generateTitleLinks();
 }

@@ -37,6 +37,7 @@ body {
   text-transform: uppercase;
   font-family: $font-header;
   font-weight: 600;
+
   span {
     text-transform: none;
     font-weight: 400;
@@ -59,13 +60,6 @@ a {
 
 .sidebar {
   flex: 1 0 0;
-}
-
-.posts {
-  flex: 2 0 0;
-}
-
-.sidebar {
   background: $color-bg-menu;
   margin-right: 10px;
   padding: 40px;
@@ -89,6 +83,7 @@ a {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
   .active {
     font-weight: bold;
   }
@@ -110,6 +105,7 @@ a {
 
 /* Post */
 .posts {
+  flex: 2 0 0;
   position: relative;
   height: 70vh;
 }
@@ -125,6 +121,7 @@ a {
   opacity: 0;
   transition: 0.5s all;
   z-index: 1;
+
   &.active {
     opacity: 1;
     z-index: 2;
@@ -144,6 +141,7 @@ a {
 
 .post-tags {
   display: flex;
+
   p {
     margin: 0 10px 0 0;
   }
