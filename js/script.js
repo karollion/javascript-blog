@@ -164,9 +164,25 @@
   }
   generateAuthors();
 
-  const authorClickHandler = function(){
-    
+  const authorClickHandler = function(event){
+    event.preventDefault();
+    const clickedElement = this;
 
+    const href = clickedElement.getAttribute('href');
+    const author =  href.replace('#author-', '');
+    console.log(author);
+
+    const activeLinks = document.querySelectorAll('a.active[href^="#author-"]');
+    for(let activeLink of activeLinks){
+      activeLink.classList.remove('active');
+    }
+
+    const linksHref = document.querySelectorAll('a[href="' + href + '"]');
+    for(let linkHref of linksHref){
+      linkHref.classList.add('active');
+    }
+
+    generateTitleLinks('[data-author="' + author + '"]');
   }
 
   const addClickListenersToAuthors = function(){
