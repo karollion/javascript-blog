@@ -101,15 +101,13 @@
 
   generateTags();
 
-  function tagClickHandler(event){
+  const tagClickHandler = function(event){
     /* prevent default action for this event */
-    console.log('klikacz tagów');
     event.preventDefault();
     /* make new constant named "clickedElement" and give it the value of "this" */
     const clickedElement = this;
     /* make a new constant "href" and read the attribute "href" of the clicked element */
     const href = clickedElement.getAttribute('href');
-    console.log(href);
 
     /* make a new constant "tag" and extract tag from the "href" constant */
     const tag =  href.replace('#tag-', '');   // Remove '#tag-' from href ( #tag-news ---> news)
@@ -120,20 +118,22 @@
     console.log(activeLinks);
 
     /* START LOOP: for each active tag link */
-
+    for(let activeLink of activeLinks){
       /* remove class active */
-
+      activeLink.classList.remove('active');
     /* END LOOP: for each active tag link */
-
+    }
     /* find all tag links with "href" attribute equal to the "href" constant */
-
+    const linksHref = document.querySelectorAll('a[href="' + href + '"]');
+    console.log(linksHref);
     /* START LOOP: for each found tag link */
-
+    for(let linkHref of linksHref){
       /* add class active */
-
+      linkHref.classList.add('active');
     /* END LOOP: for each found tag link */
-
+    }
     /* execute function "generateTitleLinks" with article selector as argument */
+    generateTitleLinks('[data-tags~="' + tag + '"]');
   }
 
   function addClickListenersToTags(){
