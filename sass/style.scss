@@ -129,13 +129,6 @@ a {
   }
 }
 
-/*.post {
-  display: none;
-  &.active {
-    display: block;
-  }
-}*/
-
 .post-author {
   font-style: italic;
 }
@@ -146,4 +139,35 @@ a {
   p {
     margin: 0 10px 0 0;
   }
+}
+
+/* Cloud of tags  */
+.tags li{
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.tag-size-1 {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.tag-size-2 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.tag-size-3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.tag-size-4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.tag-size-5 {
+  font-size: 22px;
+  font-weight: 600;
 }
